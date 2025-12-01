@@ -28,12 +28,12 @@ pip install -r requirements.txt
 
 ## Execution
 
-Note : Activate virtual env, if not already done
+Note : Activate virtual env, if not already done. (Follow Step 3 under [Setup](#setup))
 
 FaceTrace application works in 2 stages
+- Stage 1 : Recursively Scan all the photos in a folder. Detect faces in each photo and tag the photos with recognized faces.
+- Stage 2 : User can upload a face photo and the app will find all the photos containing uploaded face from the collection created in the previous Stage (Optionally copy the filtered photos to a new folder).
 
-Stage 1 : Recursively Scan all the photos in a folder. Detect faces in each photo and tag the photos with recognized faces.
-Stage 2 : User can upload a face photo and the app will find all the photos containing uploaded face from the collection created in the Stage 1 [Optionally copy the filtered photos to a new folder].
 
 ### Stage 1 + Stage 2 :
 
