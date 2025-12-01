@@ -1,5 +1,5 @@
 import os
-
+import shutil
 
 def scan_directory_for_photos(folder: str):
 
@@ -15,3 +15,12 @@ def scan_directory_for_photos(folder: str):
     print(f"Found {len(image_files)} photos")
 
     return image_files
+
+def copy_photos_to_folder(photos:list[str], folder:str) :
+
+    os.makedirs(name=folder, exist_ok=True)
+    for photo in photos :
+        shutil.copy2(photo, folder)
+    
+    print(f"Photos successfully copied to new location {folder}")
+

@@ -1,10 +1,9 @@
 import chromadb
-from chromadb import Settings
 import constants
 
-vector_db = chromadb.Client(settings=Settings(persist_directory="face_vectors"))
+vector_db = chromadb.PersistentClient(path=constants.VECTOR_STORE_PATH)
 collection = vector_db.get_or_create_collection(
-    name="face_classify_test", metadata={"hnsw:space": "cosine"}
+    name=constants.VECTOR_STORE_COLLECTION_NAME, metadata={"hnsw:space": "cosine"}
 )
 
 
